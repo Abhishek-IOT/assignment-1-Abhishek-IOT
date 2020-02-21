@@ -1,11 +1,11 @@
 package PersonDetails;
 
-import java.util.ArrayList;
+
 
 public class Person {
     private String firstName = "";
     private String lastName = "";
-    private ArrayList<String> arrayList = new ArrayList<>();
+    private String[] contactList;
     private String email = "";
 
     public String getFirstName() {
@@ -24,13 +24,7 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public ArrayList<String> getArrayList() {
-        return arrayList;
-    }
 
-    public void setArrayList(ArrayList<String> arrayList) {
-        this.arrayList = arrayList;
-    }
 
     public String getEmail() {
         return email;
@@ -40,10 +34,19 @@ public class Person {
         this.email = email;
     }
 
-    public Person(String firstName, String lastName, ArrayList<String> arrayList, String email) {
+
+    public Person(String firstName, String lastName, String[] contactList, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.arrayList = arrayList;
+        this.contactList = contactList;
         this.email = email;
+    }
+
+    public String[] getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(String[] contactList) {
+        this.contactList = contactList;
     }
 }
