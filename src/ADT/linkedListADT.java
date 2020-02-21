@@ -1,8 +1,6 @@
 package ADT;
 
-import PersonDetails.Person;
-
-public interface linkedListADT {
+public interface linkedListADT<Person> {
     Person add(Person details);
 
     Person delete(int index);
