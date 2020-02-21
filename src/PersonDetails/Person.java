@@ -35,6 +35,21 @@ public class Person {
     }
 
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("-------- * -------- * -------- * --------\n");
+        sb.append("firstName=").append(firstName).append('\n');
+        sb.append("lastName=").append(lastName).append('\n');
+        sb.append("contactList=").append(contactList);
+        sb.append("[");
+        for (int i = 0; i < contactList.length; i++) {
+            sb.append((contactList[i] != null && i != contactList.length ? contactList[i] : ""));
+            sb.append("]");
+        }
+        sb.append("\nemail='").append(email).append('\n');
+        sb.append("-------- * -------- * -------- * --------");
+        return sb.toString();
+    }
     public Person(String firstName, String lastName, String[] contactList, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
