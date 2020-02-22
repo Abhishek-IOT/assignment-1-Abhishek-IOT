@@ -70,6 +70,38 @@ public class defination<Person> implements linkedListADT<Person> {
         return temp;
     }
 
+    public ArrayList<String> getName() {
+        return Name;
+    }
+
+    public void setName(String firstName, String Lastname) {
+        FirstName.add(FirstName + Lastname);
+    }
+
+    public ArrayList<String> getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String firstName) {
+        Name.add(firstName);
+    }
+
+    public Node<Person> getHead() {
+        return head;
+    }
+
+    public void setHead(Node<Person> head) {
+        this.head = head;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     private Person removeAfter(Node<Person> node) {
         Person temp = null;
         Node<Person> response = node.getNext();
