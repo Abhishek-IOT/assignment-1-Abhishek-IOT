@@ -15,9 +15,13 @@ public class defination<Person> implements linkedListADT<Person> {
         return temp;
     }
 
+    private Node<Person> addFirst(Person details) {
+        head = new Node<Person>(head, details);
+        size++;
+    }
 
-    public Person add(Person details) {
-        return null;
+    public boolean add(Person details) {
+        return true;
     }
 
     public Person delete(int index) {
@@ -38,7 +42,7 @@ public class defination<Person> implements linkedListADT<Person> {
 
         public Node(Person data) {
             this.data = data;
-            n
+
             this.next = null;
         }
 
