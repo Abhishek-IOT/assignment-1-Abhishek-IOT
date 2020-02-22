@@ -2,8 +2,11 @@ package Defination;
 
 import ADT.linkedListADT;
 
-public class defination<Person> implements linkedListADT<Person> {
+import java.util.ArrayList;
 
+public class defination<Person> implements linkedListADT<Person> {
+    private ArrayList<String> Name = new ArrayList<>();
+    private ArrayList<String> FirstName = new ArrayList<>();
     private Node<Person> head = null;
     private int size = 0;
 
@@ -49,6 +52,11 @@ public class defination<Person> implements linkedListADT<Person> {
         return true;
     }
 
+    @Override
+    public Person delete(int index) {
+        return null;
+    }
+
     private Person removeFirst() {
         Person temp = null;
         Node<Person> node = head;
@@ -70,6 +78,10 @@ public class defination<Person> implements linkedListADT<Person> {
             size--;
             temp = response.getData();
         }
+        if (temp == null) {
+            node = null;
+            size--;
+        }
         return temp;
     }
 
@@ -77,19 +89,8 @@ public class defination<Person> implements linkedListADT<Person> {
 
 
 
-
-
-
-
-
-
-
-
-    public Person delete(int index) {
-        return null;
-    }
-
     public void search(String person) {
+
 
     }
 
