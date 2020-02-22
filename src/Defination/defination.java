@@ -15,6 +15,7 @@ public class defination<Person> implements linkedListADT<Person> {
         return temp;
     }
 
+
     public Person add(Person details) {
         return null;
     }

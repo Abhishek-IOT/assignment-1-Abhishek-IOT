@@ -1,7 +1,7 @@
 package ADT;
 
 public interface linkedListADT<Person> {
-    Person add(Person details);
+    boolean add(Person details);
 
     Person delete(int index);
 
