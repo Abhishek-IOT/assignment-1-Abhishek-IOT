@@ -15,9 +15,10 @@ public class defination<Person> implements linkedListADT<Person> {
         return temp;
     }
 
-    private Node<Person> addFirst(Person details) {
+    private void addFirst(Person details) {
         head = new Node<Person>(head, details);
         size++;
+
     }
 
     public boolean add(Person details) {
