@@ -62,6 +62,23 @@ public class defination<Person> implements linkedListADT<Person> {
         return temp;
     }
 
+    private Person removeAfter(Node<Person> node) {
+        Person temp = null;
+        Node<Person> response = node.getNext();
+        if (response != null) {
+            node.next = response.getNext();
+            size--;
+            temp = response.getData();
+        }
+        return temp;
+    }
+
+
+
+
+
+
+
 
 
 
