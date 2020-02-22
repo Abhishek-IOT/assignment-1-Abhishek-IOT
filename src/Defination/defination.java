@@ -17,7 +17,6 @@ public class defination<Person> implements linkedListADT<Person> {
         }
         return temp;
     }
-
     private void addFirst(Person details) {
         head = new Node<Person>(head, details);
         size++;
@@ -118,10 +117,27 @@ public class defination<Person> implements linkedListADT<Person> {
     }
 
 
-
-
-
+    int counter = 0;
     public void search(String person) {
+
+        for (int i = 0; i < FirstName.size(); i++) {
+            if (person.compareTo(FirstName.get(i).toString()) == 0) {
+                counter++;
+            }
+        }
+        if (counter != 0) {
+            System.out.println(counter + " match found!");
+            for (int i = 0; i < FirstName.size(); i++) {
+                if (person.compareTo(FirstName.get(i).toString()) == 0) {
+                    Node<Person> personNode = getNode(i);
+                    System.out.println(personNode.getData().toString());
+                }
+            }
+        } else {
+            System.out.println("NO MATCH FOUND!");
+        }
+
+
 
 
     }
