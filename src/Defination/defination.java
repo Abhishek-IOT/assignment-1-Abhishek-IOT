@@ -19,4 +19,26 @@ public class defination<Person> implements linkedListADT<Person> {
     public void viewAllDetails() {
 
     }
+
+    private class Node {
+        private Node next = null;
+        private Person data = null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
