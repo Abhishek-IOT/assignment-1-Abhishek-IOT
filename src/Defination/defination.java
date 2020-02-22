@@ -49,6 +49,24 @@ public class defination<Person> implements linkedListADT<Person> {
         return true;
     }
 
+    private Person removeFirst() {
+        Person temp = null;
+        Node<Person> node = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (node != null) {
+            size--;
+            temp = node.getData();
+        }
+        return temp;
+    }
+
+
+
+
+
+
 
     public Person delete(int index) {
         return null;
