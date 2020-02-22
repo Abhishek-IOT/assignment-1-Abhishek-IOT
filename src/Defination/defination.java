@@ -23,6 +23,16 @@ public class defination<Person> implements linkedListADT<Person> {
     private class Node {
         private Node next = null;
         private Person data = null;
+
+        public Node(Person data) {
+            this.data = data;
+            this.next = null;
+        }
+
+        public Node(Node next, Person data) {
+            this.next = next;
+            this.data = data;
+        }
     }
 
 
