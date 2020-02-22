@@ -32,6 +32,23 @@ public class defination<Person> implements linkedListADT<Person> {
         public Node(Node next, Person data) {
             this.next = next;
             this.data = data;
+
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+
+        public Person getData() {
+            return data;
+        }
+
+        public void setData(Person data) {
+            this.data = data;
         }
     }
 
