@@ -51,10 +51,6 @@ public class defination<Person> implements linkedListADT<Person> {
         return true;
     }
 
-    @Override
-    public Person delete(int index) {
-        return null;
-    }
 
     private Person removeFirst() {
         Person temp = null;
@@ -142,8 +138,34 @@ public class defination<Person> implements linkedListADT<Person> {
 
     }
 
-    public void viewAllDetails() {
+    public boolean delete(int index) {
+        boolean response = false;
+        if (index - 1 < 0 || (index - 1) > getSize()) {
+            throw new IndexOutOfBoundsException(Integer.toString(index - 1));
+        } else if (index - 1 == 0) {
+            removeFirst();
+            Name.remove(index - 1);
+            response = true;
+        } else {
+            Node<Person> previousNode = getNode(index - 1);
+            removeAfter(previousNode);
+            Name.remove(index - 1);
+            response = true;
+        }
+        return response;
+    }
 
+    public void viewAllContacts() {
+        if (size != 0) {
+            System.out.println("---Here are your all contacts---");
+            for (int i = 0; i < size; i++) {
+
+                Person data = this.getNode(i).getData();
+                System.out.print(data);
+            }
+        } else {
+            System.out.println("NO RESULTS FOUND!");
+        }
     }
 
     private static class Node<Person> {
