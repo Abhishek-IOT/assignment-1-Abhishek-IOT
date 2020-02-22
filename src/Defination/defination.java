@@ -7,6 +7,13 @@ public class defination<Person> implements linkedListADT<Person> {
     private Node<Person> head = null;
     private int size = 0;
 
+    public Node<Person> getNode(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
+    }
 
     public Person add(Person details) {
         return null;
@@ -30,6 +37,7 @@ public class defination<Person> implements linkedListADT<Person> {
 
         public Node(Person data) {
             this.data = data;
+            n
             this.next = null;
         }
 
