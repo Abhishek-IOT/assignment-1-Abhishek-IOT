@@ -44,19 +44,11 @@ public class defination<Person> implements linkedListADT<Person> {
 
 
     }
-
-
-
-
-
-
-
-
-
-
     public boolean add(Person details) {
+        add(size, details);
         return true;
     }
+
 
     public Person delete(int index) {
         return null;
