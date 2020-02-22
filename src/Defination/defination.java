@@ -21,6 +21,20 @@ public class defination<Person> implements linkedListADT<Person> {
 
     }
 
+    private void addAfter(Node node, Person details) {
+        Node<Person> temp = node;
+        if (node != null) {
+            temp.next = new Node(node.next, details);
+            size++;
+        }
+
+    }
+
+
+
+
+
+
     public boolean add(Person details) {
         return true;
     }
