@@ -4,6 +4,10 @@ import ADT.linkedListADT;
 
 public class defination<Person> implements linkedListADT<Person> {
 
+    private Node<Person> head = null;
+    private int size = 0;
+
+
     public Person add(Person details) {
         return null;
     }
@@ -20,7 +24,7 @@ public class defination<Person> implements linkedListADT<Person> {
 
     }
 
-    private class Node {
+    private static class Node<Person> {
         private Node next = null;
         private Person data = null;
 
@@ -51,17 +55,6 @@ public class defination<Person> implements linkedListADT<Person> {
             this.data = data;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
