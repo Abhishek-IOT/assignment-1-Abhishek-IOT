@@ -155,7 +155,7 @@ public class defination<Person> implements linkedListADT<Person> {
         return response;
     }
 
-    public void viewAllContacts() {
+    public void viewAllDetails() {
         if (size != 0) {
             System.out.println("---Here are your all contacts---");
             for (int i = 0; i < size; i++) {
